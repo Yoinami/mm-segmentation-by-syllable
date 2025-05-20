@@ -10,7 +10,7 @@ This project provides a Python function to segment Myanmar text into syllables o
 ```python
 from mmsegmentation import segment_characters
 
-text = "ကိစ္စ ၀တ္ထု"
+text = "မြန်မာ စာကြောင်း၏ ဝဏ္ဏ syllable များကို"
 result = segment_characters(text)
 print(result)
 ```
@@ -33,7 +33,7 @@ Segments Myanmar input text into characters/syllables.
 - include_zero: If True, treats ၀ (zero) and ဝ (wa) as the same character.
 Returns a list of segmented syllables/characters.
 
-Notes
+## Notes
 The segmentation logic is based on regular expressions tailored for Myanmar script.
 Some edge cases and complex rules (e.g., for words like ``မားစ်ဂြိုလ် -> [မားစ်, ဂြိုလ်]`` and ``၀တ္ထု -> [၀တ္ထု]``) may require further refinement.
 The code is a work in progress and may need additional testing for rare or complex input cases.
